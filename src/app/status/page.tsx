@@ -43,25 +43,25 @@ export default function StatusPage() {
 
   const isOnline = data?.online ?? false;
   const players = data?.players ?? 0;
-  const maxPlayers = data?.maxPlayers ?? 128;
+  const maxPlayers = data?.maxPlayers ?? 10;
   const percentage = Math.min(Math.round((players / maxPlayers) * 100), 100);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12 font-sans">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8 font-sans">
       <SectionHeading
         badge="TELEMETRIA EM TEMPO REAL"
         title="MONITOR DA REDE OUTLAND"
         description="Monitoramento operacional de conectividade, slots ocupados e nós de rede do servidor FiveM."
       />
 
-      {/* CONTAINER PRINCIPAL COM CANTOS MILITARES PRECISOS */}
-      <div className="relative bg-background-panel border border-border p-6 md:p-8 space-y-8 shadow-2xl">
+      {/* PAINEL ÚNICO (SEM CAIXAS DUPLAS / SEM SOMBRA ATRÁS) */}
+      <div className="relative bg-background-panel border border-border p-6 md:p-8 space-y-8">
         
-        {/* Cantos Táticos cravados exatamente nas 4 bordas */}
-        <div className="absolute -top-[1px] -left-[1px] w-3 h-3 border-t-2 border-l-2 border-crimson pointer-events-none" />
-        <div className="absolute -top-[1px] -right-[1px] w-3 h-3 border-t-2 border-r-2 border-crimson pointer-events-none" />
-        <div className="absolute -bottom-[1px] -left-[1px] w-3 h-3 border-b-2 border-l-2 border-crimson pointer-events-none" />
-        <div className="absolute -bottom-[1px] -right-[1px] w-3 h-3 border-b-2 border-r-2 border-crimson pointer-events-none" />
+        {/* Cantos Táticos cravados exatamente nas 4 quinas da borda */}
+        <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-crimson pointer-events-none" />
+        <div className="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-crimson pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-3.5 h-3.5 border-b-2 border-l-2 border-crimson pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-crimson pointer-events-none" />
 
         {/* CABEÇALHO DO MONITOR */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/60 pb-6">
@@ -133,7 +133,7 @@ export default function StatusPage() {
               <Activity className="w-4 h-4 text-tactical-green" />
             </div>
             <div className="text-3xl font-black text-tactical-green">
-              {data?.pingEstimateMs ? `${data.pingEstimateMs}ms` : "22ms"}
+              {data?.pingEstimateMs ? `${data.pingEstimateMs}ms` : "31ms"}
             </div>
             <div className="text-[10px] text-tactical-gray mt-3">
               Roteamento direto São Paulo (SP)
@@ -162,7 +162,7 @@ export default function StatusPage() {
             <Terminal className="w-3.5 h-3.5" />
             <span>TERMINAL TELEMETRY LOG</span>
           </div>
-          <div>&gt; Endereço do Servidor: {siteConfig.fivemEndpoint}</div>
+          <div>&gt; Endereço do Servidor: {siteConfig.cfxCode}</div>
           <div>&gt; Código Oficial Cfx.re: {siteConfig.cfxCode}</div>
           <div>&gt; Última sondagem do nó: {lastCheck}</div>
           <div>&gt; Resposta de integridade: {isOnline ? "Pacote recebido com sucesso (200 OK)" : "Aguardando sinal"}</div>
