@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-tactical-gray">
-          <p>© 2025 OUTLAND SURVIVAL. Todos os direitos reservados.</p>
+          <p>© 2026 OUTLAND SURVIVAL. Todos os direitos reservados.</p>
           <p className="text-[11px] text-zinc-500">Não afiliado à Rockstar Games ou Cfx.re.</p>
         </div>
       </div>
