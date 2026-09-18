@@ -17,6 +17,7 @@ export const storeCategories = [
 ];
 
 export const storeConfig = {
+  isOpen: false, // 🔒 MUDE PARA 'true' QUANDO O SERVIDOR ABRIR!
   currencySymbol: "R$",
   discordTicketUrl: "https://discord.gg/6F5WzMf2p7",
   pixKey: "pix@outlandsurvival.com.br", // Substitua pela sua chave Pix real se desejar
