@@ -74,7 +74,7 @@ export default function LojaPage() {
         ))}
       </div>
 
-      {/* GRID DE ITENS COM IMAGEM */}
+     {/* GRID DE ITENS COM IMAGEM */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.map((item) => (
           <div
@@ -99,19 +99,21 @@ export default function LojaPage() {
                 )}
               </div>
 
-              {/* IMAGEM DO ITEM (VITRINE) */}
-              <div className="relative w-full h-48 mb-4 bg-black/50 border border-border/70 overflow-hidden flex items-center justify-center group-hover:border-crimson/50 transition-colors">
+              {/* IMAGEM DO ITEM (PREENCHENDO 100% DO CONTAINER) */}
+              <div className="relative w-full h-52 mb-4 bg-black/60 border border-border/70 overflow-hidden group-hover:border-crimson/50 transition-colors">
                 {item.image ? (
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 ) : (
-                  <Package className="w-12 h-12 text-zinc-700" />
+                  <div className="w-full h-full flex items-center justify-center">
+                    <Package className="w-12 h-12 text-zinc-700" />
+                  </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-background-panel via-transparent to-transparent opacity-40 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background-panel via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
 
               {/* Nome */}
