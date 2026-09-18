@@ -7,8 +7,8 @@ interface DiscordButtonProps {
   className?: string;
 }
 
-// SVG OFICIAL DO DISCORD (CLYDE)
-function DiscordIcon({ className = "w-4 h-4" }: { className?: string }) {
+// ÍCONE OFICIAL DO DISCORD (CLYDE)
+export function DiscordIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -31,12 +31,15 @@ export function DiscordButton({
 
   const variants = {
     primary:
-      "bg-[#5865F2] hover:bg-[#4752C4] text-white px-5 py-3 border border-[#5865F2]/50 shadow-lg shadow-[#5865F2]/25 hover:scale-[1.02]",
+      "bg-[#5865F2] hover:bg-[#4752C4] text-white px-6 py-3.5 border border-[#5865F2]/50 shadow-lg shadow-[#5865F2]/25 hover:scale-[1.02]",
     outline:
       "border border-border bg-background-panel/80 hover:bg-background-panel text-tactical-silver hover:text-white px-5 py-3 hover:border-zinc-500",
     compact:
       "border border-border bg-background-panel/90 hover:bg-background-panel text-tactical-silver hover:text-white px-3.5 py-1.5 text-[11px] hover:border-zinc-500",
   };
+
+  // Cor do ícone: Branco no botão azul, e azul no botão escuro!
+  const iconColor = variant === "primary" ? "text-white" : "text-[#5865F2]";
 
   return (
     <a
@@ -45,7 +48,7 @@ export function DiscordButton({
       rel="noopener noreferrer"
       className={`${base} ${variants[variant]} ${className}`}
     >
-      <DiscordIcon className="w-4 h-4 text-[#5865F2] group-hover:scale-110 transition-transform" />
+      <DiscordIcon className={`w-4 h-4 ${iconColor} group-hover:scale-110 transition-transform`} />
       <span>{label}</span>
     </a>
   );

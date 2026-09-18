@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { Terminal, MessageSquare } from "lucide-react";
+import { Terminal } from "lucide-react";
+import { DiscordIcon } from "@/components/discord/DiscordButton";
 
 export function Footer() {
   return (
@@ -8,10 +9,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           
-          {/* COLUNA 1: LOGO OFICIAL E APRESENTAÇÃO */}
+          {/* COLUNA 1: LOGO E APRESENTAÇÃO */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              {/* Imagem da Logo Oficial */}
               <img
                 src="/images/branding/logo.png"
                 alt="Logo Outland Survival"
@@ -38,7 +38,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* COLUNA 2: NAVEGAÇÃO DO SERVIDOR */}
+          {/* COLUNA 2: NAVEGAÇÃO */}
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-white font-bold mb-4">
               NAVEGAÇÃO
@@ -54,7 +54,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* COLUNA 3: DIRETRIZES & SUPORTE */}
+          {/* COLUNA 3: DIRETRIZES & DISCORD */}
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest text-white font-bold mb-4">
               DIRETRIZES
@@ -68,9 +68,9 @@ export function Footer() {
                   href={siteConfig.discordUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors flex items-center gap-1.5 text-tactical-silver"
+                  className="hover:text-white transition-colors flex items-center gap-2 text-tactical-silver"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#5865F2]" />
+                  <DiscordIcon className="w-4 h-4 text-[#5865F2]" />
                   <span>Discord Oficial</span>
                 </a>
               </li>
@@ -79,7 +79,7 @@ export function Footer() {
 
         </div>
 
-        {/* COPYRIGHT E AVISOS LEGAIS */}
+        {/* COPYRIGHT */}
         <div className="pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-tactical-gray">
           <p>© {new Date().getFullYear()} OUTLAND SURVIVAL. Todos os direitos reservados.</p>
           <p className="text-[11px] text-zinc-500">
