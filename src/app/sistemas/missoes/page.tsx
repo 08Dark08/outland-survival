@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlayNowButton } from "@/components/server/PlayNowButton";
 import { HudCorner } from "@/components/effects/HudCorner";
-import { Radio, Crosshair, Timer, Award, ShieldAlert, HeartPulse, FileText } from "lucide-react";
+import { Crosshair, HeartPulse } from "lucide-react";
 
 export const metadata = {
   title: "Missões & Operações | Outland Survival",
@@ -14,7 +14,7 @@ export default function MissoesPage() {
       <SectionHeading
         badge="CONTRATOS DE RISCO"
         title="OPERAÇÕES & MISSÕES DE CAMPO"
-        description="Conclua contratos táticos para resgatar sobreviventes feridos e desbloquear projetos médicos de Adrenalina e Medkits."
+        description="Conclua operações cooperativas para resgatar sobreviventes feridos e desbloquear projetos médicos essenciais."
       />
 
       {/* OPERAÇÃO 1: RESGATE HOSPITAL PILLBOX */}
@@ -23,7 +23,7 @@ export default function MissoesPage() {
         <div className="flex items-center justify-between border-b border-border/60 pb-4">
           <div className="flex items-center gap-2 text-crimson font-mono text-xs font-bold uppercase">
             <HeartPulse className="w-4 h-4" />
-            <span>OPERAÇÃO TÁTICA 01 // RESGATE DE SOBREVIVENTE</span>
+            <span>OPERAÇÃO 01 // RESGATE DE SOBREVIVENTE</span>
           </div>
           <span className="font-mono text-xs text-tactical-green border border-tactical-green/40 px-2 py-0.5">
             +25% BÔNUS COM VIDA CHEIA
@@ -35,7 +35,7 @@ export default function MissoesPage() {
             RESGATE NO HOSPITAL PILLBOX HILL
           </h3>
           <p className="text-xs sm:text-sm text-tactical-gray mt-2 leading-relaxed">
-            Um civil ferido está encurralado na clínica com <strong className="text-white">tempo de sangramento de 180 segundos</strong>. Você deve romper a barricada externa de zumbis Gasbag e Infector, localizar 3 caixas de remédio e aplicar o tratamento antes da morte da vítima.
+            Um operador ferido está encurralado na clínica médica com <strong className="text-white">tempo de sangramento de 180 segundos</strong>. Rompa o cerco externo de infectados, encontre 3 caixas de remédios e escolte a vítima até a extração sob ondas de inimigos por 60 segundos.
           </p>
         </div>
 
@@ -48,11 +48,11 @@ export default function MissoesPage() {
           <div className="bg-background-secondary p-4 border border-border">
             <div className="text-tactical-gray text-[10px]">EXPERIÊNCIA</div>
             <div className="text-base font-bold text-tactical-amber mt-1">+120 XP</div>
-            <div className="text-[10px] text-zinc-500">Progresso de Operador</div>
+            <div className="text-[10px] text-zinc-500">Evolução de Operador</div>
           </div>
           <div className="bg-background-secondary p-4 border border-border">
             <div className="text-tactical-gray text-[10px]">RECOMPENSAS</div>
-            <div className="text-base font-bold text-tactical-green mt-1">$400 a $800</div>
+            <div className="text-base font-bold text-tactical-green mt-1">400 a 800 BioChips</div>
             <div className="text-[10px] text-zinc-500">100% Adrenalina & Bandagens</div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function MissoesPage() {
             <span>OPERAÇÃO CIENTÍFICA 09 // AMOSTRAS BIOLÓGICAS</span>
           </div>
           <span className="font-mono text-xs text-tactical-amber border border-tactical-amber/40 px-2 py-0.5">
-            35% CHANCE DE BLUEPRINTS
+            35% CHANCE DE PROJETOS
           </span>
         </div>
 
@@ -76,17 +76,17 @@ export default function MissoesPage() {
             COLETA DAS 4 VARIANTES ESPECIAIS
           </h3>
           <p className="text-xs sm:text-sm text-tactical-gray mt-2 leading-relaxed">
-            O cientista do laboratório necessita de 4 amostras biológicas de espécimes raros: o Screamer no Pátio Ferroviário, o Infector nos Esgotos, o Riot_y no Terminal e o Bull Mutante no Ferro Velho.
+            O cientista do laboratório necessita de amostras dos 4 espécimes mais perigosos: o Corredor no Pátio Ferroviário, o Tóxico nos Esgotos, o Blindado no Terminal e o Mutante Colossal no Ferro Velho.
           </p>
         </div>
 
         <div className="space-y-2 border-t border-border/60 pt-4">
           <div className="font-mono text-xs font-bold uppercase text-white">PROJETOS MÉDICOS DESBLOQUEÁVEIS (BLUEPRINTS):</div>
           <div className="flex flex-wrap gap-2 text-xs font-mono">
-            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">blueprint:bandage</span>
-            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">blueprint:gauze</span>
-            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">blueprint:medkit</span>
-            <span className="px-2.5 py-1 bg-background-secondary border border-border text-tactical-green font-bold">blueprint:adrenaline</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">Projeto: Bandagem Limpa</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">Projeto: Compressas de Gaze</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">Projeto: Kit Médico Avançado</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-tactical-green font-bold">Projeto: Injetor de Adrenalina</span>
           </div>
         </div>
       </div>
