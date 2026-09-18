@@ -5,11 +5,11 @@ export const siteConfig = {
   websiteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://outlandsurvival.com.br",
   discordUrl: "https://discord.gg/6F5WzMf2p7",
   
-  // SEU CÓDIGO OFICIAL CFX.RE
+  // CÓDIGO OFICIAL CFX.RE & ENDPOINT
   cfxCode: "bqp7ad",
+  fivemEndpoint: "bqp7ad",
   cfxJoinUrl: "https://cfx.re/join/bqp7ad",
 
-  // 👉 CORREÇÃO AQUI: Apenas o código puro no protocolo
   get fivemConnectUrl() {
     return `fivem://connect/${this.cfxCode}`;
   },
