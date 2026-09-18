@@ -26,7 +26,7 @@ export default function SobrePage() {
       title: "A ORIGEM: LABORATÓRIOS HUMANE & YERSINIA-25",
       icon: Dna,
       date: "ANO ZERO // O INCIDENTE",
-      image: "/images/lore/lore_1.jpg",
+      image: "/images/lore/lore_1.png",
       paragraphs: [
         "A cidade de Los Santos, antes um centro de negócios e o reflexo do 'sonho americano', tornou-se o epicentro de uma catástrofe que alterou irrevogavelmente o destino da humanidade.",
         "Os Laboratórios Humane, operando sob sigilo absoluto e à margem de convenções bioéticas, alegavam conduzir pesquisas farmacêuticas de regeneração tecidual — um soro capaz de reparar lesões motoras severas e aprimorar as capacidades físicas humanas.",
@@ -40,7 +40,7 @@ export default function SobrePage() {
       title: "O DECLÍNIO DA CIVILIZAÇÃO",
       icon: Building2,
       date: "MÊS 02 // O DIA EM QUE A CIDADE CAIU",
-      image: "/images/lore/lore_2.jpg",
+      image: "/images/lore/lore_2.png",
       paragraphs: [
         "A histeria coletiva tomou conta das avenidas. Enquanto os canais de imprensa tentavam camuflar o horror como 'incidentes isolados de histeria violenta', a realidade transformava Los Santos em um abatedouro urbano a céu aberto.",
         "O governo impôs lei marcial sumária. Bairros inteiros foram murados e postos sob quarentena forçada. Tropas militares abandonaram os civis nos distritos centrais enquanto helicópteros de combate sobrevoavam as torres executivas, executando qualquer silhueta em movimento.",
@@ -53,7 +53,7 @@ export default function SobrePage() {
       title: "O SURGIMENTO DOS SOBREVIVENTES",
       icon: ShieldCheck,
       date: "ANO 03 // ADAPTAÇÃO & GUERRA FRIA",
-      image: "/images/lore/lore_3.jpg",
+      image: "/images/lore/lore_3.png",
       paragraphs: [
         "Aqueles que se recusaram a perecer aprenderam a mais dura das lições: a ingenuidade é uma sentença de morte. Shoppings abandonados tornaram-se fortalezas muradas por grades industriais, bunkers da Guerra Fria foram reabertos e a escuridão dos esgotos virou refúgio.",
         "Neste novo ecossistema, os infectados deixaram de ser a única ameaça. Facções mercenárias, saqueadores e ex-soldados ergueram feudos próprios, cobrando pedágios em munição e comida. A confiança tornou-se uma moeda inexistente.",
@@ -66,7 +66,7 @@ export default function SobrePage() {
       title: "O NOVO MUNDO: DEZ ANOS DEPOIS",
       icon: Sunrise,
       date: "ATUALIDADE // A ERA DO OUTLAND",
-      image: "/images/lore/lore_4.jpg",
+      image: "/images/lore/lore_4.png",
       paragraphs: [
         "Dez anos se passaram desde a queda. A ilha de San Andreas agora é conhecida apenas como Outland: um território esquecido onde a natureza engoliu o asfalto e a escassez dita quem vive e quem morre.",
         "Após o desaparecimento da última expedição de batedores enviada ao norte, uma nova geração de operadores emerge dos refúgios. Não há governos, não há leis civis e não há resgates agendados.",
