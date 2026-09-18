@@ -1,12 +1,99 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlayNowButton } from "@/components/server/PlayNowButton";
+import { HudCorner } from "@/components/effects/HudCorner";
+import { Radio, Crosshair, Timer, Award, ShieldAlert, HeartPulse, FileText } from "lucide-react";
+
+export const metadata = {
+  title: "Missões & Operações | Outland Survival",
+  description: "Operação Resgate Pillbox e Missão 09 de Amostras Biológicas.",
+};
 
 export default function MissoesPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12 space-y-8">
-      <SectionHeading badge="OPERAÇÕES" title="MISSÕES E CONTRATOS" description="Contratos dinâmicos para ganhar reputação e suprimentos raros." />
-      <div className="bg-background-panel border border-border p-6"><p className="text-sm text-tactical-gray">Atenda chamados de rádio na safezone para obter coordenadas de caixas-pretas e amostras biológicas.</p></div>
-      <div className="flex justify-center"><PlayNowButton size="large" /></div>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 font-sans">
+      <SectionHeading
+        badge="CONTRATOS DE RISCO"
+        title="OPERAÇÕES & MISSÕES DE CAMPO"
+        description="Conclua contratos táticos para resgatar sobreviventes feridos e desbloquear projetos médicos de Adrenalina e Medkits."
+      />
+
+      {/* OPERAÇÃO 1: RESGATE HOSPITAL PILLBOX */}
+      <div className="bg-background-panel border border-border p-6 md:p-8 relative space-y-6">
+        <HudCorner position="top-left" />
+        <div className="flex items-center justify-between border-b border-border/60 pb-4">
+          <div className="flex items-center gap-2 text-crimson font-mono text-xs font-bold uppercase">
+            <HeartPulse className="w-4 h-4" />
+            <span>OPERAÇÃO TÁTICA 01 // RESGATE DE SOBREVIVENTE</span>
+          </div>
+          <span className="font-mono text-xs text-tactical-green border border-tactical-green/40 px-2 py-0.5">
+            +25% BÔNUS COM VIDA CHEIA
+          </span>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-black font-mono uppercase text-white">
+            RESGATE NO HOSPITAL PILLBOX HILL
+          </h3>
+          <p className="text-xs sm:text-sm text-tactical-gray mt-2 leading-relaxed">
+            Um civil ferido está encurralado na clínica com <strong className="text-white">tempo de sangramento de 180 segundos</strong>. Você deve romper a barricada externa de zumbis Gasbag e Infector, localizar 3 caixas de remédio e aplicar o tratamento antes da morte da vítima.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+          <div className="bg-background-secondary p-4 border border-border">
+            <div className="text-tactical-gray text-[10px]">TEMPO DE EXTRAÇÃO</div>
+            <div className="text-base font-bold text-white mt-1">60s de Defesa</div>
+            <div className="text-[10px] text-zinc-500">Ondas a cada 5 segundos</div>
+          </div>
+          <div className="bg-background-secondary p-4 border border-border">
+            <div className="text-tactical-gray text-[10px]">EXPERIÊNCIA</div>
+            <div className="text-base font-bold text-tactical-amber mt-1">+120 XP</div>
+            <div className="text-[10px] text-zinc-500">Progresso de Operador</div>
+          </div>
+          <div className="bg-background-secondary p-4 border border-border">
+            <div className="text-tactical-gray text-[10px]">RECOMPENSAS</div>
+            <div className="text-base font-bold text-tactical-green mt-1">$400 a $800</div>
+            <div className="text-[10px] text-zinc-500">100% Adrenalina & Bandagens</div>
+          </div>
+        </div>
+      </div>
+
+      {/* OPERAÇÃO 2: AMOSTRAS BIOLÓGICAS */}
+      <div className="bg-background-panel border border-border p-6 md:p-8 relative space-y-6">
+        <HudCorner position="top-left" />
+        <div className="flex items-center justify-between border-b border-border/60 pb-4">
+          <div className="flex items-center gap-2 text-crimson font-mono text-xs font-bold uppercase">
+            <Crosshair className="w-4 h-4" />
+            <span>OPERAÇÃO CIENTÍFICA 09 // AMOSTRAS BIOLÓGICAS</span>
+          </div>
+          <span className="font-mono text-xs text-tactical-amber border border-tactical-amber/40 px-2 py-0.5">
+            35% CHANCE DE BLUEPRINTS
+          </span>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-black font-mono uppercase text-white">
+            COLETA DAS 4 VARIANTES ESPECIAIS
+          </h3>
+          <p className="text-xs sm:text-sm text-tactical-gray mt-2 leading-relaxed">
+            O cientista do laboratório necessita de 4 amostras biológicas de espécimes raros: o Screamer no Pátio Ferroviário, o Infector nos Esgotos, o Riot_y no Terminal e o Bull Mutante no Ferro Velho.
+          </p>
+        </div>
+
+        <div className="space-y-2 border-t border-border/60 pt-4">
+          <div className="font-mono text-xs font-bold uppercase text-white">PROJETOS MÉDICOS DESBLOQUEÁVEIS (BLUEPRINTS):</div>
+          <div className="flex flex-wrap gap-2 text-xs font-mono">
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">blueprint:bandage</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">blueprint:gauze</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-zinc-300">blueprint:medkit</span>
+            <span className="px-2.5 py-1 bg-background-secondary border border-border text-tactical-green font-bold">blueprint:adrenaline</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center pt-4">
+        <PlayNowButton size="large" />
+      </div>
     </div>
   );
 }
